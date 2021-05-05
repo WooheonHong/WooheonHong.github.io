@@ -11,7 +11,7 @@
 
 
 
-    <title>Python Advanced (1) - Context Manager</title>
+    <title>Pandas/Numpy Tip</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -21,7 +21,12 @@
 
     <!-- Custom.css -->
     <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Web Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+    <!-- syntax.css -->
+    <link rel="stylesheet" type="text/css" href="//assets/built/syntax.css">
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -40,16 +45,15 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="기술 블로그" />
     <link rel="shortcut icon" href="https://WooheonHong.github.io/assets/built/images/favicon.jpg" type="image/png" />
-    <link rel="canonical" href="https://WooheonHong.github.io/Python-context-manager" />
+    <link rel="canonical" href="https://WooheonHong.github.io/Pandas-Tip" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="Data Science with Lodge" />
+    <meta property="og:site_name" content="Wooheon's Data Science Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Python Advanced (1) - Context Manager" />
-    <meta property="og:description" content="test
-" />
-    <meta property="og:url" content="https://WooheonHong.github.io/Python-context-manager" />
+    <meta property="og:title" content="Pandas/Numpy Tip" />
+    <meta property="og:description" content="R에서 사용하는 전처리 방식을 파이썬에서도 그대로 사용하는 것이 유용한 경우가 많습니다. 따라서 본 포스팅은 R에서 주로 사용하는 함수를 pandas 및 numpy로 구현했을 때의 코드를 찾아보았습니다. nest/unnest nest unnest 원본 def unnesting(df, explode, axis): if axis==1: df1 = pd.concat([df[x].explode() for x in explode], axis=1) return df1.join(df.drop(explode, 1), how='left') else : df1" />
+    <meta property="og:url" content="https://WooheonHong.github.io/Pandas-Tip" />
     <meta property="og:image" content="https://WooheonHong.github.io/assets/built/images/python-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
@@ -57,13 +61,12 @@
     <meta property="article:modified_time" content="2021-05-05T10:00:00+09:00" />
     <meta property="article:tag" content="Python" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Python Advanced (1) - Context Manager" />
-    <meta name="twitter:description" content="test
-" />
+    <meta name="twitter:title" content="Pandas/Numpy Tip" />
+    <meta name="twitter:description" content="R에서 사용하는 전처리 방식을 파이썬에서도 그대로 사용하는 것이 유용한 경우가 많습니다. 따라서 본 포스팅은 R에서 주로 사용하는 함수를 pandas 및 numpy로 구현했을 때의 코드를 찾아보았습니다. nest/unnest nest unnest 원본 def unnesting(df, explode, axis): if axis==1: df1 = pd.concat([df[x].explode() for x in explode], axis=1) return df1.join(df.drop(explode, 1), how='left') else : df1" />
     <meta name="twitter:url" content="https://WooheonHong.github.io/" />
     <meta name="twitter:image" content="https://WooheonHong.github.io/assets/built/images/python-logo.png" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="Data Science with Lodge" />
+    <meta name="twitter:data1" content="Wooheon's Data Science Blog" />
     <meta name="twitter:label2" content="Filed under" />
     <meta name="twitter:data2" content="Python" />
     <meta name="twitter:site" content="@" />
@@ -77,10 +80,10 @@
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "Data Science with Lodge",
+        "name": "Wooheon's Data Science Blog",
         "logo": "https://WooheonHong.github.io/"
     },
-    "url": "https://WooheonHong.github.io/Python-context-manager",
+    "url": "https://WooheonHong.github.io/Pandas-Tip",
     "image": {
         "@type": "ImageObject",
         "url": "https://WooheonHong.github.io/assets/built/images/python-logo.png",
@@ -89,10 +92,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://WooheonHong.github.io/Python-context-manager"
+        "@id": "https://WooheonHong.github.io/Pandas-Tip"
     },
-    "description": "test
-"
+    "description": "R에서 사용하는 전처리 방식을 파이썬에서도 그대로 사용하는 것이 유용한 경우가 많습니다. 따라서 본 포스팅은 R에서 주로 사용하는 함수를 pandas 및 numpy로 구현했을 때의 코드를 찾아보았습니다. nest/unnest nest unnest 원본 def unnesting(df, explode, axis): if axis==1: df1 = pd.concat([df[x].explode() for x in explode], axis=1) return df1.join(df.drop(explode, 1), how='left') else : df1"
 }
     </script>
 
@@ -105,7 +107,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Python Advanced (1) - Context Manager" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Pandas/Numpy Tip" href="/feed.xml" />
 
 
 </head>
@@ -124,7 +126,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://WooheonHong.github.io/">Data Science with Lodge</a>
+                <a class="site-nav-logo" href="https://WooheonHong.github.io/">Wooheon's Data Science Blog</a>
             
         
         
@@ -151,7 +153,7 @@ into the {body} of the default.hbs template -->
             
         </div>
         
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            <a class="subscribe-button" href="#subscribe">Search</a>
         
     </div>
 </nav>
@@ -179,7 +181,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Python Advanced (1) - Context Manager</h1>
+                <h1 class="post-full-title">Pandas/Numpy Tip</h1>
             </header>
 
             <!--
@@ -191,7 +193,125 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>test</p>
+                    <p>R에서 사용하는 전처리 방식을 파이썬에서도 그대로 사용하는 것이 유용한 경우가 많습니다.</p>
+
+<p>따라서 본 포스팅은 R에서 주로 사용하는 함수를 pandas 및 numpy로 구현했을 때의 코드를 찾아보았습니다.</p>
+
+<h1 id="nestunnest">nest/unnest</h1>
+
+<h2 id="nest">nest</h2>
+
+<h2 id="unnest">unnest</h2>
+
+<p><a href="https://stackoverflow.com/questions/53218931/how-to-unnest-explode-a-column-in-a-pandas-dataframe">원본</a></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">unnesting</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">explode</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">axis</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">explode</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">explode</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df1</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">explode</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">how</span><span class="o">=</span><span class="s">'left'</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span>
+                         <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">explode</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df1</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">explode</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">how</span><span class="o">=</span><span class="s">'left'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="combination">combination</h1>
+
+<p>벤치마킹 결과는 다음 <a href="https://stackoverflow.com/questions/16003217/n-d-version-of-itertools-combinations-in-numpy/63694661#63694661">링크</a></p>
+
+<p>데이터 수가 적을 때와 클 때 다른 함수를 사용합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">combinations_small</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">comb</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromiter</span><span class="p">(</span>
+    <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">k</span><span class="p">)),</span> <span class="nb">int</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">count</span> <span class="o">*</span> <span class="n">k</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">index</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">combinations_large</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">triu_indices</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h1 id="factor">factor</h1>
+
+<p>파이썬은 R과는 달리 factor자료형이 존재하지는 않습니다.</p>
+
+<p>대신에, 판다스에서는 categorical 자료형을 제공합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">])</span>
+<span class="mi">0</span>    <span class="n">a</span>
+<span class="mi">1</span>    <span class="n">b</span>
+<span class="mi">2</span>    <span class="n">c</span>
+<span class="mi">3</span>    <span class="n">a</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s2 = s.astype("category")
+
+0    a
+1    b
+2    c
+3    a
+dtype: category
+Categories (3, object): ['a', 'b', 'c']
+</code></pre></div></div>
+
+<p>그리고 순서형 데이터를 선언하기 위해서는 <code class="highlighter-rouge">ordered=True</code>를 사용합니다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df = pd.DataFrame({"A": list("abca"), "B": list("bccd")})
+
+cat_type = CategoricalDtype(categories=list("abcd"), ordered=True)
+
+df_cat = df.astype(cat_type)
+
+df_cat["A"] 
+0    a
+1    b
+2    c
+3    a
+Name: A, dtype: category
+Categories (4, object): ['a' &lt; 'b' &lt; 'c' &lt; 'd']
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">pd.Categorical</code>를 사용해서 바로 선언할 수도 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">([</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s">"b"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">])</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">"cat"</span><span class="p">:</span> <span class="n">cat</span><span class="p">,</span> <span class="s">"s"</span><span class="p">:</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+       <span class="n">cat</span>  <span class="n">s</span>
+<span class="n">count</span>    <span class="mi">3</span>  <span class="mi">3</span>
+<span class="n">unique</span>   <span class="mi">2</span>  <span class="mi">2</span>
+<span class="n">top</span>      <span class="n">c</span>  <span class="n">c</span>
+<span class="n">freq</span>     <span class="mi">2</span>  <span class="mi">2</span>
+</code></pre></div></div>
+
+<h2 id="memory-usage">Memory Usage</h2>
+
+<p>object 객체 보다 category 객체를 사용하는 것이 메모리 사용량을 줄일 수 있습니다. 
+<code class="highlighter-rouge">Categorical</code>의 메모리 사용량은 카테고리의 수 + 데이터의 길이에 비례합니다.</p>
+
+<h3 id="note"><strong>NOTE</strong></h3>
+
+<hr />
+<ul>
+  <li>카테고리의 수가 만약 데이터의 길이에 근접한다면 <code class="highlighter-rouge">Categorical</code>은 동일하게 표현되는 <code class="highlighter-rouge">obejct</code> 자료형보다 더 많은 메모리를 사용합니다.</li>
+  <li>
+    <h2 id="categorical은-numpy-배열이-아닙니다">Categorical은 numpy 배열이 아닙니다.</h2>
+  </li>
+</ul>
+
+<h2 id="r의-factor와의-차이">R의 factor와의 차이</h2>
+
+<ul>
+  <li>R의 <code class="highlighter-rouge">levels</code>이 <code class="highlighter-rouge">categories</code>라고 이름 붙여졌습니다.</li>
+  <li>R의 <code class="highlighter-rouge">levels</code>는 항상 문자열입니다. 반면에, <code class="highlighter-rouge">categories</code>는 어떤 자료형도 될 수 있습니다.</li>
+  <li>선언 시에 label을 명시하는 것은 불가능하므로, 선언 이후에 <code class="highlighter-rouge">s.cat.rename_categories(new_labels)</code>를 사용하세요.</li>
+  <li>R의 <code class="highlighter-rouge">factor</code>함수와는 대조적으로, 새로운 카테고리 series를 만들기위해 categorical data를 인풋으로 사용할 때, 사용하지 않는 categories를 제거하지 않습니다. 
+하지만 전달하는 것과 동일한 새로운 categorical series를 생성합니다.</li>
+  <li>R은 <code class="highlighter-rouge">levels</code>에 결측치를 포함하는 것을 허용하지만 pandas는 <code class="highlighter-rouge">NaN</code>을 허용하지 않습니다. 하지만 결측치는 여전히 <code class="highlighter-rouge">values</code>가 될 수 있습니다.</li>
+</ul>
+
 
                 </div>
             </section>
@@ -200,18 +320,27 @@ into the {body} of the default.hbs template -->
             <!--
             
                 <section class="subscribe-form">
-                    <h3 class="subscribe-form-title">Subscribe to Data Science with Lodge</h3>
+                    <h3 class="subscribe-form-title">Subscribe to Wooheon's Data Science Blog</h3>
                     <p>Get the latest posts delivered right to your inbox</p>
-                    <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
 
     <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+        <input class="subscribe-email" onkeyup="myFunc()"
+               id="searchtext" type="text" name="searchtext"
+               placeholder="Search..." />
     </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
                 </section>
             
             !-->
@@ -248,9 +377,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://WooheonHong.github.io/Python-context-manager';
-                            this.page.identifier = '/Python-context-manager';
-                            this.page.title = 'Python Advanced (1) - Context Manager';
+                            this.page.url = 'https://WooheonHong.github.io/Pandas-Tip';
+                            this.page.identifier = '/Pandas-Tip';
+                            this.page.title = 'Pandas/Numpy Tip';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -391,22 +520,22 @@ into the {body} of the default.hbs template -->
     <div class="floating-header-logo">
         <a href="https://WooheonHong.github.io/">
             
-            <span>Data Science with Lodge</span>
+            <span>Wooheon's Data Science Blog</span>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Python Advanced (1) - Context Manager</div>
+    <div class="floating-header-title">Pandas/Numpy Tip</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Python+Advanced+%281%29+-+Context+Manager&amp;url=https://WooheonHong.github.io/Python-context-manager"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Pandas%2FNumpy+Tip&amp;url=https://WooheonHong.github.io/Pandas-Tip"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://WooheonHong.github.io/Python-context-manager"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://WooheonHong.github.io/Pandas-Tip"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
@@ -431,7 +560,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://WooheonHong.github.io/">Data Science with Lodge</a> &copy; 2021</section>
+                <section class="copyright"><a href="https://WooheonHong.github.io/">Wooheon's Data Science Blog</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
@@ -447,25 +576,35 @@ into the {body} of the default.hbs template -->
     </div>
 
     <!-- The big email subscribe modal content -->
+
     
-        <div id="subscribe" class="subscribe-overlay">
-            <a class="subscribe-overlay-close" href="#"></a>
-            <div class="subscribe-overlay-content">
-                
-                <h1 class="subscribe-overlay-title">Subscribe to Data Science with Lodge</h1>
-                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
-                <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search Wooheon's Data Science Blog</h1>
+            <p class="subscribe-overlay-description"> lunr.js를 이용한 posts 검색 </p>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
 
     <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+        <input class="subscribe-email" onkeyup="myFunc()"
+               id="searchtext" type="text" name="searchtext"
+               placeholder="Search..." />
     </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
-            </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
         </div>
+    </div>
     
 
     <!-- highlight.js -->

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /Anomaly-Detecdtion/
+
+Sitemap: https://wooheonhong.github.io/sitemap.xml
