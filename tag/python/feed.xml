@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://wooheonhong.github.io/tag/programming-language/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://wooheonhong.github.io/tag/python/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://wooheonhong.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-05-05T11:52:06+09:00</updated>
-  <id>https://wooheonhong.github.io/tag/programming-language/feed.xml</id>
+  <updated>2021-05-05T13:12:52+09:00</updated>
+  <id>https://wooheonhong.github.io/tag/python/feed.xml</id>
 
   
   
@@ -54,7 +54,7 @@
       
 
       
-        <category term="Programming Language" />
+        <category term="Python" />
       
 
       
