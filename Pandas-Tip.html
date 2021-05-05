@@ -167,7 +167,7 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-python post tag-Programming Language ">
+        <article class="post-full  tag-python post tag-Python ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
@@ -232,84 +232,17 @@ into the {body} of the default.hbs template -->
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">triu_indices</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </code></pre></div></div>
 
-<h1 id="factor">factor</h1>
+<h1 id="extra">Extra</h1>
 
-<p>파이썬은 R과는 달리 factor자료형이 존재하지는 않습니다.</p>
-
-<p>대신에, 판다스에서는 categorical 자료형을 제공합니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">])</span>
-<span class="mi">0</span>    <span class="n">a</span>
-<span class="mi">1</span>    <span class="n">b</span>
-<span class="mi">2</span>    <span class="n">c</span>
-<span class="mi">3</span>    <span class="n">a</span>
-<span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
-</code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s2 = s.astype("category")
-
-0    a
-1    b
-2    c
-3    a
-dtype: category
-Categories (3, object): ['a', 'b', 'c']
-</code></pre></div></div>
-
-<p>그리고 순서형 데이터를 선언하기 위해서는 <code class="highlighter-rouge">ordered=True</code>를 사용합니다.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df = pd.DataFrame({"A": list("abca"), "B": list("bccd")})
-
-cat_type = CategoricalDtype(categories=list("abcd"), ordered=True)
-
-df_cat = df.astype(cat_type)
-
-df_cat["A"] 
-0    a
-1    b
-2    c
-3    a
-Name: A, dtype: category
-Categories (4, object): ['a' &lt; 'b' &lt; 'c' &lt; 'd']
-</code></pre></div></div>
-
-<p><code class="highlighter-rouge">pd.Categorical</code>를 사용해서 바로 선언할 수도 있습니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">([</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s">"b"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">])</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">"cat"</span><span class="p">:</span> <span class="n">cat</span><span class="p">,</span> <span class="s">"s"</span><span class="p">:</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]})</span>
-
-<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-
-       <span class="n">cat</span>  <span class="n">s</span>
-<span class="n">count</span>    <span class="mi">3</span>  <span class="mi">3</span>
-<span class="n">unique</span>   <span class="mi">2</span>  <span class="mi">2</span>
-<span class="n">top</span>      <span class="n">c</span>  <span class="n">c</span>
-<span class="n">freq</span>     <span class="mi">2</span>  <span class="mi">2</span>
-</code></pre></div></div>
-
-<h2 id="memory-usage">Memory Usage</h2>
-
-<p>object 객체 보다 category 객체를 사용하는 것이 메모리 사용량을 줄일 수 있습니다. 
-<code class="highlighter-rouge">Categorical</code>의 메모리 사용량은 카테고리의 수 + 데이터의 길이에 비례합니다.</p>
-
-<h3 id="note"><strong>NOTE</strong></h3>
-
-<hr />
 <ul>
-  <li>카테고리의 수가 만약 데이터의 길이에 근접한다면 <code class="highlighter-rouge">Categorical</code>은 동일하게 표현되는 <code class="highlighter-rouge">obejct</code> 자료형보다 더 많은 메모리를 사용합니다.</li>
-  <li>
-    <h2 id="categorical은-numpy-배열이-아닙니다">Categorical은 numpy 배열이 아닙니다.</h2>
+  <li>Negative Select
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">negative_select_list</span><span class="p">)]</span>
+</code></pre></div>    </div>
   </li>
-</ul>
-
-<h2 id="r의-factor와의-차이">R의 factor와의 차이</h2>
-
-<ul>
-  <li>R의 <code class="highlighter-rouge">levels</code>이 <code class="highlighter-rouge">categories</code>라고 이름 붙여졌습니다.</li>
-  <li>R의 <code class="highlighter-rouge">levels</code>는 항상 문자열입니다. 반면에, <code class="highlighter-rouge">categories</code>는 어떤 자료형도 될 수 있습니다.</li>
-  <li>선언 시에 label을 명시하는 것은 불가능하므로, 선언 이후에 <code class="highlighter-rouge">s.cat.rename_categories(new_labels)</code>를 사용하세요.</li>
-  <li>R의 <code class="highlighter-rouge">factor</code>함수와는 대조적으로, 새로운 카테고리 series를 만들기위해 categorical data를 인풋으로 사용할 때, 사용하지 않는 categories를 제거하지 않습니다. 
-하지만 전달하는 것과 동일한 새로운 categorical series를 생성합니다.</li>
-  <li>R은 <code class="highlighter-rouge">levels</code>에 결측치를 포함하는 것을 허용하지만 pandas는 <code class="highlighter-rouge">NaN</code>을 허용하지 않습니다. 하지만 결측치는 여전히 <code class="highlighter-rouge">values</code>가 될 수 있습니다.</li>
+  <li>Split Grouped DataFrame and Store Dictionary
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">group_var</span><span class="p">)}</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 
@@ -357,7 +290,7 @@ Categories (4, object): ['a' &lt; 'b' &lt; 'c' &lt; 'd']
                             <section class="author-card-content">
                                 <h4 class="author-card-name"><a href="/author/WooheonHong">WooheonHong</a></h4>
                                 
-                                    <p><a href="https://www.linkedin.com/in/wooheon-hong-b33621200/"> 데이터사이언스 with 롯지  </a></p>
+                                    <p><a href="https://www.linkedin.com/in/wooheon-hong-b33621200/"> Linkdin  </a></p>
                                 
                             </section>
                         </section>
