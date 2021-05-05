@@ -52,7 +52,7 @@
     <meta property="og:site_name" content="Wooheon's Data Science Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Categorical data type in pandas" />
-    <meta property="og:description" content="R의 factor와 비슷한 자료형인 pandas에는 categories가 존재합니다. factor 파이썬은 R과는 달리 factor자료형이 존재하지는 않습니다. 대신에, 판다스에서는 categorical 자료형을 제공합니다. s = pd.Series(["a", "b", "c", "a"]) 0 a 1 b 2 c 3 a dtype: object s2 = s.astype("category") 0 a 1 b 2 c 3 a dtype: category Categories (3," />
+    <meta property="og:description" content="pandas에는 R의 factor와 비슷한 자료형인 categories가 존재합니다. factor 파이썬은 R과는 달리 factor자료형이 존재하지는 않습니다. 대신에, 판다스에서는 categorical 자료형을 제공합니다. s = pd.Series(["a", "b", "c", "a"]) 0 a 1 b 2 c 3 a dtype: object s2 = s.astype("category") 0 a 1 b 2 c 3 a dtype: category Categories (3," />
     <meta property="og:url" content="https://WooheonHong.github.io/categorical" />
     <meta property="og:image" content="https://WooheonHong.github.io/assets/built/images/pandas.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -62,7 +62,7 @@
     <meta property="article:tag" content="Python" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Categorical data type in pandas" />
-    <meta name="twitter:description" content="R의 factor와 비슷한 자료형인 pandas에는 categories가 존재합니다. factor 파이썬은 R과는 달리 factor자료형이 존재하지는 않습니다. 대신에, 판다스에서는 categorical 자료형을 제공합니다. s = pd.Series(["a", "b", "c", "a"]) 0 a 1 b 2 c 3 a dtype: object s2 = s.astype("category") 0 a 1 b 2 c 3 a dtype: category Categories (3," />
+    <meta name="twitter:description" content="pandas에는 R의 factor와 비슷한 자료형인 categories가 존재합니다. factor 파이썬은 R과는 달리 factor자료형이 존재하지는 않습니다. 대신에, 판다스에서는 categorical 자료형을 제공합니다. s = pd.Series(["a", "b", "c", "a"]) 0 a 1 b 2 c 3 a dtype: object s2 = s.astype("category") 0 a 1 b 2 c 3 a dtype: category Categories (3," />
     <meta name="twitter:url" content="https://WooheonHong.github.io/" />
     <meta name="twitter:image" content="https://WooheonHong.github.io/assets/built/images/pandas.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -94,7 +94,7 @@
         "@type": "WebPage",
         "@id": "https://WooheonHong.github.io/categorical"
     },
-    "description": "R의 factor와 비슷한 자료형인 pandas에는 categories가 존재합니다. factor 파이썬은 R과는 달리 factor자료형이 존재하지는 않습니다. 대신에, 판다스에서는 categorical 자료형을 제공합니다. s = pd.Series(["a", "b", "c", "a"]) 0 a 1 b 2 c 3 a dtype: object s2 = s.astype("category") 0 a 1 b 2 c 3 a dtype: category Categories (3,"
+    "description": "pandas에는 R의 factor와 비슷한 자료형인 categories가 존재합니다. factor 파이썬은 R과는 달리 factor자료형이 존재하지는 않습니다. 대신에, 판다스에서는 categorical 자료형을 제공합니다. s = pd.Series(["a", "b", "c", "a"]) 0 a 1 b 2 c 3 a dtype: object s2 = s.astype("category") 0 a 1 b 2 c 3 a dtype: category Categories (3,"
 }
     </script>
 
@@ -193,7 +193,7 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>R의 factor와 비슷한 자료형인 pandas에는 categories가 존재합니다.</p>
+                    <p>pandas에는 R의 factor와 비슷한 자료형인 categories가 존재합니다.</p>
 
 <h1 id="factor">factor</h1>
 
@@ -254,15 +254,16 @@ Categories (4, object): ['a' &lt; 'b' &lt; 'c' &lt; 'd']
 <p>object 객체 보다 category 객체를 사용하는 것이 메모리 사용량을 줄일 수 있습니다.
 <code class="highlighter-rouge">Categorical</code>의 메모리 사용량은 카테고리의 수 + 데이터의 길이에 비례합니다.</p>
 
-<h3 id="note"><strong>NOTE</strong></h3>
+<p>카테고리의 수가 만약 데이터의 길이에 근접한다면 <code class="highlighter-rouge">Categorical</code>은 동일하게 표현되는 <code class="highlighter-rouge">obejct</code> 자료형보다 더 많은 메모리를 사용합니다.</p>
 
 <hr />
+<p><strong>NOTE</strong></p>
+
 <ul>
-  <li>카테고리의 수가 만약 데이터의 길이에 근접한다면 <code class="highlighter-rouge">Categorical</code>은 동일하게 표현되는 <code class="highlighter-rouge">obejct</code> 자료형보다 더 많은 메모리를 사용합니다.</li>
-  <li>
-    <h2 id="categorical은-numpy-배열이-아닙니다">Categorical은 numpy 배열이 아닙니다.</h2>
-  </li>
+  <li>Categorical은 numpy 배열이 아닙니다.</li>
 </ul>
+
+<hr />
 
 <h2 id="r의-factor와의-차이">R의 factor와의 차이</h2>
 

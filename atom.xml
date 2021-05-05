@@ -10,7 +10,7 @@
       <item>
         <title>Categorical data type in pandas</title>
         
-          <description>&lt;p&gt;R의 factor와 비슷한 자료형인 pandas에는 categories가 존재합니다.&lt;/p&gt;
+          <description>&lt;p&gt;pandas에는 R의 factor와 비슷한 자료형인 categories가 존재합니다.&lt;/p&gt;
 
 </description>
         

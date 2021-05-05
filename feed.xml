@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://wooheonhong.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wooheonhong.github.io/" rel="alternate" type="text/html" /><updated>2021-05-05T17:01:49+09:00</updated><id>https://wooheonhong.github.io/</id><title type="html">Wooheon’s Data Science Blog</title><subtitle>기술 블로그</subtitle><entry><title type="html">Categorical data type in pandas</title><link href="https://wooheonhong.github.io/categorical" rel="alternate" type="text/html" title="Categorical data type in pandas" /><published>2021-05-05T16:00:00+09:00</published><updated>2021-05-05T16:00:00+09:00</updated><id>https://wooheonhong.github.io/categorical</id><content type="html" xml:base="https://wooheonhong.github.io/categorical">&lt;p&gt;R의 factor와 비슷한 자료형인 pandas에는 categories가 존재합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://wooheonhong.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wooheonhong.github.io/" rel="alternate" type="text/html" /><updated>2021-05-05T17:05:58+09:00</updated><id>https://wooheonhong.github.io/</id><title type="html">Wooheon’s Data Science Blog</title><subtitle>기술 블로그</subtitle><entry><title type="html">Categorical data type in pandas</title><link href="https://wooheonhong.github.io/categorical" rel="alternate" type="text/html" title="Categorical data type in pandas" /><published>2021-05-05T16:00:00+09:00</published><updated>2021-05-05T16:00:00+09:00</updated><id>https://wooheonhong.github.io/categorical</id><content type="html" xml:base="https://wooheonhong.github.io/categorical">&lt;p&gt;pandas에는 R의 factor와 비슷한 자료형인 categories가 존재합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;factor&quot;&gt;factor&lt;/h1&gt;
 
@@ -59,15 +59,16 @@ Categories (4, object): ['a' &amp;lt; 'b' &amp;lt; 'c' &amp;lt; 'd']
 &lt;p&gt;object 객체 보다 category 객체를 사용하는 것이 메모리 사용량을 줄일 수 있습니다.
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Categorical&lt;/code&gt;의 메모리 사용량은 카테고리의 수 + 데이터의 길이에 비례합니다.&lt;/p&gt;
 
-&lt;h3 id=&quot;note&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;카테고리의 수가 만약 데이터의 길이에 근접한다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;Categorical&lt;/code&gt;은 동일하게 표현되는 &lt;code class=&quot;highlighter-rouge&quot;&gt;obejct&lt;/code&gt; 자료형보다 더 많은 메모리를 사용합니다.&lt;/p&gt;
 
 &lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;카테고리의 수가 만약 데이터의 길이에 근접한다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;Categorical&lt;/code&gt;은 동일하게 표현되는 &lt;code class=&quot;highlighter-rouge&quot;&gt;obejct&lt;/code&gt; 자료형보다 더 많은 메모리를 사용합니다.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;categorical은-numpy-배열이-아닙니다&quot;&gt;Categorical은 numpy 배열이 아닙니다.&lt;/h2&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Categorical은 numpy 배열이 아닙니다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;r의-factor와의-차이&quot;&gt;R의 factor와의 차이&lt;/h2&gt;
 
@@ -78,7 +79,7 @@ Categories (4, object): ['a' &amp;lt; 'b' &amp;lt; 'c' &amp;lt; 'd']
   &lt;li&gt;R의 &lt;code class=&quot;highlighter-rouge&quot;&gt;factor&lt;/code&gt;함수와는 대조적으로, 새로운 카테고리 series를 만들기위해 categorical data를 인풋으로 사용할 때, 사용하지 않는 categories를 제거하지 않습니다.
 하지만 전달하는 것과 동일한 새로운 categorical series를 생성합니다.&lt;/li&gt;
   &lt;li&gt;R은 &lt;code class=&quot;highlighter-rouge&quot;&gt;levels&lt;/code&gt;에 결측치를 포함하는 것을 허용하지만 pandas는 &lt;code class=&quot;highlighter-rouge&quot;&gt;NaN&lt;/code&gt;을 허용하지 않습니다. 하지만 결측치는 여전히 &lt;code class=&quot;highlighter-rouge&quot;&gt;values&lt;/code&gt;가 될 수 있습니다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>WooheonHong</name></author><category term="Python" /><summary type="html">R의 factor와 비슷한 자료형인 pandas에는 categories가 존재합니다.</summary></entry><entry><title type="html">Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network</title><link href="https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network" rel="alternate" type="text/html" title="Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network" /><published>2021-05-05T10:30:00+09:00</published><updated>2021-05-05T10:30:00+09:00</updated><id>https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network</id><content type="html" xml:base="https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; Anomaly Detection는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>WooheonHong</name></author><category term="Python" /><summary type="html">pandas에는 R의 factor와 비슷한 자료형인 categories가 존재합니다.</summary></entry><entry><title type="html">Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network</title><link href="https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network" rel="alternate" type="text/html" title="Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network" /><published>2021-05-05T10:30:00+09:00</published><updated>2021-05-05T10:30:00+09:00</updated><id>https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network</id><content type="html" xml:base="https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; Anomaly Detection는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;!-- 날짜 뒤부터 .md 앞까지 쓰기. 공백은 있으면 안됨 --&gt;
     &lt;!-- 뒷부분은 title과 동일하게 --&gt;
