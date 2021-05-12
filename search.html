@@ -189,30 +189,12 @@ into the {body} of the default.hbs template -->
     }
     ,
     
-    "ad-tsad-using-temporal-hierarchical-one-class-network": {
-        "title": "Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network",
-            "author": "WooheonHong",
-            "category": "",
-            "content": " Anomaly Detection는 여러 절로 구성되어 있습니다.              Multi-class Data Description for Out-of-distribution Detection    Timeseries Anomaly Detection using Temporal Hierarchical One-Class NetworkTimeseries Anomaly Detection using Temporal Hierarchical One-Class Network은 2020 NIPS에 accept된 논문입니다.",
-        "url": "/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network"
-    }
-    ,
-    
     "pandas-tip": {
         "title": "Pandas/Numpy Tip",
             "author": "WooheonHong",
             "category": "",
             "content": "R에서 사용하는 전처리 방식을 파이썬에서도 그대로 사용하는 것이 유용한 경우가 많습니다.따라서 본 포스팅은 R에서 주로 사용하는 함수를 pandas 및 numpy로 구현했을 때의 코드를 찾아보았습니다.nest/unnestnestunnest원본def unnesting(df, explode, axis):    if axis==1:        df1 = pd.concat([df[x].explode() for x in explode], axis=1)        return df1.join(df.drop(explode, 1), how='left')    else :        df1 = pd.concat([                         pd.DataFrame(df[x].tolist(), index=df.index).add_prefix(x) for x in explode], axis=1)        return df1.join(df.drop(explode, 1), how='left')combination벤치마킹 결과는 다음 링크데이터 수가 적을 때와 클 때 다른 함수를 사용합니다.def combinations_small(n, k):    count = comb(n, k, exact=True)    index = np.fromiter(    chain.from_iterable(combinations(range(n), k)), int, count=count * k    )    return index.reshape(-1, k)def combinations_large(n):    return np.transpose(np.triu_indices(n, 1))Extra  Negative Select    df[df.columns.difference(negative_select_list)]        Split Grouped DataFrame and Store Dictionary    {name: pd.DataFrame(df) for name, df in df.groupby(group_var)}      ",
         "url": "/Pandas-Tip"
-    }
-    ,
-    
-    "ad-multi-class-data-description-for-ood": {
-        "title": "Multi-class Data Description for Out-of-distribution Detection",
-            "author": "WooheonHong",
-            "category": "",
-            "content": " Anomaly Detection는 여러 절로 구성되어 있습니다.              Multi-class Data Description for Out-of-distribution Detection    Timeseries Anomaly Detection using Temporal Hierarchical One-Class NetworkMulti-class Data Description for Out-of-distribution Detection은 2020 KDD에 accept된 논문입니다.본 논문은 SVDD를 ..",
-        "url": "/AD-Multi-class-Data-Description-for-OOD"
     }
     
     

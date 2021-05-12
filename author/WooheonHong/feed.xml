@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://wooheonhong.github.io/author/WooheonHong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://wooheonhong.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-05-05T17:05:58+09:00</updated>
+  <updated>2021-05-12T11:09:10+09:00</updated>
   <id>https://wooheonhong.github.io/author/WooheonHong/feed.xml</id>
 
   
@@ -147,48 +147,6 @@ Categories (4, object): ['a' &amp;lt; 'b' &amp;lt; 'c' &amp;lt; 'd']
     </entry>
   
     <entry>
-      <title type="html">Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network</title>
-      <link href="https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network" rel="alternate" type="text/html" title="Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network" />
-      <published>2021-05-05T10:30:00+09:00</published>
-      <updated>2021-05-05T10:30:00+09:00</updated>
-      <id>https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network</id>
-      <content type="html" xml:base="https://wooheonhong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; Anomaly Detection는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 날짜 뒤부터 .md 앞까지 쓰기. 공백은 있으면 안됨 --&gt;
-    &lt;!-- 뒷부분은 title과 동일하게 --&gt;
-    &lt;li&gt;&lt;a href=&quot;./AD-Multi-class-Data-Description-for-OOD&quot;&gt; Multi-class Data Description for Out-of-distribution Detection&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./AD-TSAD-using-Temporal-Hierarchical-One-Class-Network&quot;&gt;Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network은 2020 NIPS에 accept된 논문입니다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>WooheonHong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Anomaly Detection" />
-      
-
-      
-        <summary type="html">Anomaly Detection는 여러 절로 구성되어 있습니다. Multi-class Data Description for Out-of-distribution Detection Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">Pandas/Numpy Tip</title>
       <link href="https://wooheonhong.github.io/Pandas-Tip" rel="alternate" type="text/html" title="Pandas/Numpy Tip" />
       <published>2021-05-05T10:00:00+09:00</published>
@@ -266,50 +224,6 @@ Categories (4, object): ['a' &amp;lt; 'b' &amp;lt; 'c' &amp;lt; 'd']
 
       
         <summary type="html">R에서 사용하는 전처리 방식을 파이썬에서도 그대로 사용하는 것이 유용한 경우가 많습니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Multi-class Data Description for Out-of-distribution Detection</title>
-      <link href="https://wooheonhong.github.io/AD-Multi-class-Data-Description-for-OOD" rel="alternate" type="text/html" title="Multi-class Data Description for Out-of-distribution Detection" />
-      <published>2021-05-05T10:00:00+09:00</published>
-      <updated>2021-05-05T10:00:00+09:00</updated>
-      <id>https://wooheonhong.github.io/AD-Multi-class-Data-Description-for-OOD</id>
-      <content type="html" xml:base="https://wooheonhong.github.io/AD-Multi-class-Data-Description-for-OOD">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; Anomaly Detection는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 날짜 뒤부터 .md 앞까지 쓰기. 공백은 있으면 안됨 --&gt;
-    &lt;!-- 뒷부분은 title과 동일하게 --&gt;
-    &lt;li&gt;&lt;a href=&quot;./AD-Multi-class-Data-Description-for-OOD&quot;&gt; Multi-class Data Description for Out-of-distribution Detection&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./AD-TSAD-using-Temporal-Hierarchical-One-Class-Network&quot;&gt;Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Multi-class Data Description for Out-of-distribution Detection은 2020 KDD에 accept된 논문입니다.&lt;/p&gt;
-
-&lt;p&gt;본 논문은 SVDD를 ..&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>WooheonHong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Anomaly Detection" />
-      
-
-      
-        <summary type="html">Anomaly Detection는 여러 절로 구성되어 있습니다. Multi-class Data Description for Out-of-distribution Detection Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network</summary>
       
 
       

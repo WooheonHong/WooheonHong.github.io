@@ -23,27 +23,6 @@
     
       
       <item>
-        <title>Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network</title>
-        
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; Anomaly Detection는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 날짜 뒤부터 .md 앞까지 쓰기. 공백은 있으면 안됨 --&gt;
-    &lt;!-- 뒷부분은 title과 동일하게 --&gt;
-    &lt;li&gt;&lt;a href=&quot;./AD-Multi-class-Data-Description-for-OOD&quot;&gt; Multi-class Data Description for Out-of-distribution Detection&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./AD-TSAD-using-Temporal-Hierarchical-One-Class-Network&quot;&gt;Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Wed, 05 May 2021 10:30:00 +0900</pubDate>
-        <link>
-        https://WooheonHong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network</link>
-        <guid isPermaLink="true">https://WooheonHong.github.io/AD-TSAD-using-Temporal-Hierarchical-One-Class-Network</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Pandas/Numpy Tip</title>
         
           <description>&lt;p&gt;R에서 사용하는 전처리 방식을 파이썬에서도 그대로 사용하는 것이 유용한 경우가 많습니다.&lt;/p&gt;
@@ -54,27 +33,6 @@
         <link>
         https://WooheonHong.github.io/Pandas-Tip</link>
         <guid isPermaLink="true">https://WooheonHong.github.io/Pandas-Tip</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Multi-class Data Description for Out-of-distribution Detection</title>
-        
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; Anomaly Detection는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;!-- 날짜 뒤부터 .md 앞까지 쓰기. 공백은 있으면 안됨 --&gt;
-    &lt;!-- 뒷부분은 title과 동일하게 --&gt;
-    &lt;li&gt;&lt;a href=&quot;./AD-Multi-class-Data-Description-for-OOD&quot;&gt; Multi-class Data Description for Out-of-distribution Detection&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./AD-TSAD-using-Temporal-Hierarchical-One-Class-Network&quot;&gt;Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Wed, 05 May 2021 10:00:00 +0900</pubDate>
-        <link>
-        https://WooheonHong.github.io/AD-Multi-class-Data-Description-for-OOD</link>
-        <guid isPermaLink="true">https://WooheonHong.github.io/AD-Multi-class-Data-Description-for-OOD</guid>
       </item>
       
     
