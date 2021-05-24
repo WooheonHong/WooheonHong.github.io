@@ -6,35 +6,5 @@
     <link>
     https://WooheonHong.github.io</link>
     
-      
-      <item>
-        <title>Categorical data type in pandas</title>
-        
-          <description>&lt;p&gt;pandas에는 R의 factor와 비슷한 자료형인 categories가 존재합니다.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Wed, 05 May 2021 16:00:00 +0900</pubDate>
-        <link>
-        https://WooheonHong.github.io/categorical</link>
-        <guid isPermaLink="true">https://WooheonHong.github.io/categorical</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Pandas/Numpy Tip</title>
-        
-          <description>&lt;p&gt;R에서 사용하는 전처리 방식을 파이썬에서도 그대로 사용하는 것이 유용한 경우가 많습니다.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Wed, 05 May 2021 10:00:00 +0900</pubDate>
-        <link>
-        https://WooheonHong.github.io/Pandas-Tip</link>
-        <guid isPermaLink="true">https://WooheonHong.github.io/Pandas-Tip</guid>
-      </item>
-      
-    
   </channel>
 </rss>
